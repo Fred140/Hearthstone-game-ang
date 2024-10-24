@@ -20,6 +20,8 @@ export class CardComponent implements OnInit {
 
 
   @Input()
+  public zoom:number = 1;
+
   public cardStyle:any ={};
 
   public imgStyle:any = {};
@@ -32,9 +34,9 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
 
-   // this.cardStyle = {
-     // 'zoom': this.zoom
-    //};
+   this.cardStyle = {
+      'zoom': this.zoom
+    };
 
     this.imgStyle = {
       'background-image': 'url('+this.data?.img+')'

@@ -1,7 +1,8 @@
 <div *ngIf="data !== null"
 class="card"
 [ngClass]="{'flipped': flipped}"
-(click)="toggleFlip()">
+(click)="toggleFlip()"
+[ngStyle]="cardStyle">
 
   <div class="face front">
     <div class="row">
