@@ -1,10 +1,12 @@
 <!--Ici on va poser le filtre en fonction des types-->
+<div class="position">
+  <select [(ngModel)]="currentType">
+    <option *ngFor="let cur of types" value={{cur.type}}>{{cur.name}}</option>
+  </select> <br>
+  <label>Nom: </label><input type="text" [(ngModel)]="currentName" /> <br />
+  <label>Description: </label><input type="text" [(ngModel)]="currentDesc" /> <br />
+</div>
 
-<select [(ngModel)]="currentType">
-  <option *ngFor="let cur of types" value={{cur.type}}>{{cur.name}}</option>
-</select> <br>
-<label>Nom: </label><input type="text" [(ngModel)]="currentName" /> <br />
-<label>Description: </label><input type="text" [(ngModel)]="currentDesc" /> <br />
 <div class="board">
   <app-card *ngFor="let currentCard of list|cardType:currentType|nameContains:currentName|descContains:currentDesc" [data]="currentCard" [zoom]="0.5" ></app-card>
 </div>
