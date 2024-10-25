@@ -5,11 +5,13 @@ import { CardComponent } from "../card/card.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CardTypePipe } from "../card-type.pipe";
+import { NameContainsPipe } from "../name-contains.pipe";
+import { DescContainsPipe } from "../desc-contains.pipe";
 
 @Component({
   selector: 'app-catalog',
   standalone: true,
-  imports: [CardComponent, CommonModule, FormsModule, CardTypePipe],
+  imports: [CardComponent, CommonModule, FormsModule, CardTypePipe, NameContainsPipe, DescContainsPipe],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.css'
 })
