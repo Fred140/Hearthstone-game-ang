@@ -5,6 +5,9 @@ import { CardComponent } from "./card/card.component";
 import { CommonModule } from '@angular/common';
 import { CatalogComponent } from "./catalog/catalog.component";
 
+
+
+
 @Component({
   selector: 'app-root',
   standalone: true,

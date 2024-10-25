@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { CardService } from './../card.service';
+import { Component, OnInit } from '@angular/core';
 import { Card, CARD_LIST, CARD_TYPES, DEFAULT_TYPE } from '../card';
 import { CardComponent } from "../card/card.component";
 import { CommonModule } from '@angular/common';
@@ -12,7 +13,7 @@ import { CardTypePipe } from "../card-type.pipe";
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.css'
 })
-export class CatalogComponent {
+export class CatalogComponent implements OnInit{
 
   public list:Card[] = [];
   public types:any[] = [];
@@ -20,8 +21,26 @@ export class CatalogComponent {
   public currentName:string = "";
   public currentDesc:string = "";
 
-  constructor(){
-    this.list = CARD_LIST;
-    this.types = CARD_TYPES;
+  constructor(private cardService:CardService){
+
+  }
+  ngOnInit(): void {
+    this.cardService.getAll().subscribe(
+      ( cards:Card[]) => {
+         this.list = cards;
+      }
+    );
+
+    this.cardService.getTypes().subscribe(
+      (types:any[]) => {
+        this.types = types;
+      }
+    );
+
+    this.cardService.getDefaultType().subscribe(
+      (type:string) => {
+        this.currentType = type;
+      }
+    );
   }
 }
