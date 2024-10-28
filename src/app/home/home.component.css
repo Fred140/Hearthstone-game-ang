@@ -1,0 +1,58 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.overlay {
+  position:absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('/B1PES-BWIzL.jpg');
+  background-size: cover;
+  z-index: -100;
+}
+
+.text {
+  padding: 300px 0;
+  color: #FFF;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(30px 10px 4px #4444dd);
+}
+
+.text h1{
+  font-size: 75px;
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+@media(max-width:810px) {
+   .overlay {
+    background: url('/B1PES-BWIzL.jpg') center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+   }
+
+    .text {
+      justify-content: center;
+      text-wrap: balance;
+      color: black;
+    }
+}
+
+

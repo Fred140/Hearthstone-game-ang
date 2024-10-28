@@ -1,4 +1,8 @@
 nav{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   padding: 10px 0 10px;
    background-color: rgb(129, 74, 2);
 }
 
@@ -8,4 +12,16 @@ a {
 
 ul li a {
   color: white;
+  transition: color .3s;
+}
+
+ul li a:hover {
+  color:rgb(48, 27, 1);
+}
+
+nav ul {
+  flex:1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
 }
