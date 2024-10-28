@@ -15,13 +15,18 @@
       "default": false
   },
   {
-      "type": "human",
-      "name": "Humain",
+      "type": "sorcier",
+      "name": "Sorcier",
       "default": false
   },
   {
-      "type": "Youtuber",
-      "name": "Youtuber",
+      "type": "sort",
+      "name": "Fureur du dragon",
       "default": false
-  }
+  },
+  {
+    "type": "guerrier",
+    "name": "Garruk",
+    "default": false
+}
 ]
